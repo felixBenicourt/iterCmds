@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 07, 2024 at 04:15 AM
+-- Generation Time: Dec 18, 2024 at 03:08 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -36,7 +36,7 @@ CREATE TABLE `asset` (
   `variation` varchar(500) DEFAULT NULL,
   `version` int(11) DEFAULT 1,
   `status` enum('In Progress','Approved','Deprecated') DEFAULT 'In Progress'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `asset`
@@ -44,15 +44,10 @@ CREATE TABLE `asset` (
 
 INSERT INTO `asset` (`id`, `projectId`, `name`, `type`, `task`, `variation`, `version`, `status`) VALUES
 (1, 1, 'rocketGirl', 'chr', 'rig', 'main', 1, 'Approved'),
-(2, 1, 'wolfDog', 'chr', 'rig', 'main', 1, 'In Progress'),
-(3, 1, 'scifi', 'loc', 'set', 'main', 1, 'In Progress'),
-(4, 1, 'cabin', 'loc', 'set', 'main', 1, 'In Progress'),
-(5, 1, 'robot', 'prp', 'rig', 'main', 1, 'In Progress'),
-(6, 1, 'rocketGirl', 'chr', 'mdl', 'main', 1, 'In Progress'),
-(7, 1, 'cameraShot', 'cam', 'rig', 'main', 1, 'In Progress'),
-(8, 1, 'mrButtons', 'chr', 'rig', 'main', 1, 'In Progress'),
-(9, 1, 'mrButtons', 'chr', 'mdl', 'main', 1, 'In Progress'),
-(11, 1, 'mrButtons', 'chr', 'surf', 'main', 1, 'In Progress');
+(2, 1, 'rocketGirl', 'chr', 'mdl', 'main', 1, 'Approved'),
+(3, 1, 'mrButton', 'chr', 'mdl', 'main', 1, 'Approved'),
+(4, 1, 'thanos', 'chr', 'mdl', 'main', 1, 'Approved'),
+(5, 1, 'thanos', 'chr', 'rig', 'main', 1, 'Approved');
 
 -- --------------------------------------------------------
 
@@ -89,10 +84,7 @@ CREATE TABLE `sequence` (
 --
 
 INSERT INTO `sequence` (`id`, `projectId`, `name`) VALUES
-(1, 1, '00000'),
-(2, 1, '00001'),
-(3, 1, '00002'),
-(4, 1, '00003');
+(1, 1, '00003');
 
 -- --------------------------------------------------------
 
@@ -118,9 +110,18 @@ CREATE TABLE `shot` (
 --
 
 INSERT INTO `shot` (`id`, `projectId`, `name`, `type`, `task`, `variation`, `sequenceId`, `version`, `cutIn`, `cutOut`) VALUES
-(2, 1, '00004', 'shot', 'ani', 'main', 0, 1, 50, 150),
-(3, 1, '00004', 'shot', 'cfx', 'main', 0, 1, 50, 150),
-(4, 1, '00114', 'shot', 'cfx', 'main', 0, 1, 0, 0);
+(1, 1, '00000', 'shot', 'ani', 'main', 0, 1, 0, 0),
+(2, 1, '00001', 'shot', 'ani', 'main', 0, 1, 0, 0),
+(3, 1, '00002', 'shot', 'ani', 'main', 0, 1, 0, 0),
+(4, 1, '00003', 'shot', 'ani', 'main', 0, 1, 0, 0),
+(5, 1, '00000', 'shot', 'cfx', 'main', 0, 1, 0, 0),
+(6, 1, '00001', 'shot', 'cfx', 'main', 0, 1, 0, 0),
+(7, 1, '00002', 'shot', 'cfx', 'main', 0, 1, 0, 0),
+(8, 1, '00003', 'shot', 'cfx', 'main', 0, 1, 0, 0),
+(9, 1, '00000', 'shot', 'brk', 'main', 0, 1, 0, 0),
+(10, 1, '00001', 'shot', 'brk', 'main', 0, 1, 0, 0),
+(11, 1, '00002', 'shot', 'brk', 'main', 0, 1, 0, 0),
+(12, 1, '00003', 'shot', 'brk', 'main', 0, 1, 0, 0);
 
 --
 -- Indexes for dumped tables
@@ -130,8 +131,7 @@ INSERT INTO `shot` (`id`, `projectId`, `name`, `type`, `task`, `variation`, `seq
 -- Indexes for table `asset`
 --
 ALTER TABLE `asset`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `ProjectID` (`projectId`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `project`
@@ -159,25 +159,25 @@ ALTER TABLE `shot`
 -- AUTO_INCREMENT for table `asset`
 --
 ALTER TABLE `asset`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `project`
 --
 ALTER TABLE `project`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `sequence`
 --
 ALTER TABLE `sequence`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `shot`
 --
 ALTER TABLE `shot`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
