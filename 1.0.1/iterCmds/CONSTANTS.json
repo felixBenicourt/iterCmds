@@ -1,0 +1,267 @@
+{
+    "id": 1691463141024,
+    "scene_width": 64000,
+    "scene_height": 64000,
+    "nodes": [
+        {
+            "id": 1691550770576,
+            "title": "Constant",
+            "customTitle": "root",
+            "pos_x": -310.3125,
+            "pos_y": -153.5625,
+            "inputs": [],
+            "outputs": [
+                {
+                    "id": 1691550770720,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 2
+                }
+            ],
+            "content": {
+                "widget": [
+                    {
+                        "type": "text_field",
+                        "label": "Attribute Name:",
+                        "default": "root_constants",
+                        "key": "editAttributeName"
+                    },
+                    {
+                        "type": "text_field",
+                        "label": "Attribute Value:",
+                        "default": "C:\\HOME\\proj",
+                        "key": "editCurrentValue"
+                    }
+                ]
+            },
+            "op_code": 1
+        },
+        {
+            "id": 1691550770144,
+            "title": "Join path",
+            "customTitle": "Join path",
+            "pos_x": -27.0,
+            "pos_y": -143.25,
+            "inputs": [
+                {
+                    "id": 1691550770768,
+                    "index": 0,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 2
+                },
+                {
+                    "id": 1691550770864,
+                    "index": 1,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 2
+                }
+            ],
+            "outputs": [
+                {
+                    "id": 1691550770384,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 2
+                }
+            ],
+            "content": {
+                "widget": [
+                    {
+                        "type": "text_field",
+                        "label": "Attribute top:",
+                        "default": "root_constants",
+                        "key": "AttributeTop"
+                    },
+                    {
+                        "type": "text_field",
+                        "label": "Attribute bottom:",
+                        "default": "name_constants",
+                        "key": "AttributeBottom"
+                    },
+                    {
+                        "type": "text_field",
+                        "label": "New name attribute:",
+                        "default": "path_constants",
+                        "key": "NewNameAttribute"
+                    }
+                ]
+            },
+            "op_code": 27
+        },
+        {
+            "id": 1691550776192,
+            "title": "Constant",
+            "customTitle": "project",
+            "pos_x": -310.875,
+            "pos_y": 55.99999999999997,
+            "inputs": [],
+            "outputs": [
+                {
+                    "id": 1691550776336,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 2
+                }
+            ],
+            "content": {
+                "widget": [
+                    {
+                        "type": "text_field",
+                        "label": "Attribute Name:",
+                        "default": "name_constants",
+                        "key": "editAttributeName"
+                    },
+                    {
+                        "type": "text_field",
+                        "label": "Attribute Value:",
+                        "default": "template",
+                        "key": "editCurrentValue"
+                    }
+                ]
+            },
+            "op_code": 1
+        },
+        {
+            "id": 2406996134640,
+            "title": "Merge",
+            "customTitle": "Merge",
+            "pos_x": 207.875,
+            "pos_y": -56.5625,
+            "inputs": [
+                {
+                    "id": 2407045480944,
+                    "index": 0,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 2
+                },
+                {
+                    "id": 2407045480992,
+                    "index": 1,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 2
+                }
+            ],
+            "outputs": [
+                {
+                    "id": 2407045481088,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 2
+                }
+            ],
+            "content": {
+                "widget": []
+            },
+            "op_code": 2
+        },
+        {
+            "id": 2407045482528,
+            "title": "Merge",
+            "customTitle": "Merge",
+            "pos_x": -28.0,
+            "pos_y": 44.75,
+            "inputs": [
+                {
+                    "id": 2407045482720,
+                    "index": 0,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 2
+                },
+                {
+                    "id": 2407045482768,
+                    "index": 1,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 2
+                }
+            ],
+            "outputs": [
+                {
+                    "id": 2407045482816,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 2
+                }
+            ],
+            "content": {
+                "widget": []
+            },
+            "op_code": 2
+        },
+        {
+            "id": 3038674419232,
+            "title": "Echo stream attributes",
+            "customTitle": "Echo var",
+            "pos_x": 386.75,
+            "pos_y": -57.25,
+            "inputs": [
+                {
+                    "id": 3038674419520,
+                    "index": 0,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 5
+                }
+            ],
+            "outputs": [],
+            "content": {
+                "widget": []
+            },
+            "op_code": 18
+        }
+    ],
+    "edges": [
+        {
+            "id": 2407045481040,
+            "edge_type": 2,
+            "start": 1691550770384,
+            "end": 2407045480944
+        },
+        {
+            "id": 2406997439632,
+            "edge_type": 2,
+            "start": 1691550770720,
+            "end": 2407045482720
+        },
+        {
+            "id": 2407045483776,
+            "edge_type": 2,
+            "start": 1691550776336,
+            "end": 2407045482768
+        },
+        {
+            "id": 2407045485792,
+            "edge_type": 2,
+            "start": 2407045482816,
+            "end": 2407045480992
+        },
+        {
+            "id": 1691550762656,
+            "edge_type": 2,
+            "start": 1691550770720,
+            "end": 1691550770768
+        },
+        {
+            "id": 1691550766112,
+            "edge_type": 2,
+            "start": 1691550776336,
+            "end": 1691550770864
+        },
+        {
+            "id": 3038674419136,
+            "edge_type": 2,
+            "start": 2407045481088,
+            "end": 3038674419520
+        }
+    ]
+}

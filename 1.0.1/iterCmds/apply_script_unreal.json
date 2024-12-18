@@ -1,0 +1,279 @@
+{
+    "id": 1702525566496,
+    "scene_width": 64000,
+    "scene_height": 64000,
+    "nodes": [
+        {
+            "id": 1702525629104,
+            "title": "Python iter",
+            "customTitle": "Python iter",
+            "pos_x": 404.75,
+            "pos_y": -142.75,
+            "inputs": [
+                {
+                    "id": 1702525780416,
+                    "index": 0,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 1
+                }
+            ],
+            "outputs": [
+                {
+                    "id": 1702525780464,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 1
+                }
+            ],
+            "content": {
+                "widget": [
+                    {
+                        "type": "text_editor",
+                        "label": "Python Code Editor",
+                        "key": "python_code",
+                        "default": "\n\nimport subprocess\nimport time\n\ndef open_unreal_and_run_script(unreal_path, project_path, python_script_path):\n    command = [\n        unreal_path,\n        project_path,\n        \"-nullrhi\",\n        \"-NoEditor\",\n        \"-unattended\",\n        f'-ExecCmds=py \"{python_script_path}\"'\n    ]\n    process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)\n    \n    try:\n        process.wait()\n        stdout, stderr = process.communicate()\n        print(\"STDOUT:\\n\", stdout)\n        print(\"STDERR:\\n\", stderr)\n        \n    except Exception as e:\n        print(f\"An error occurred: {e}\")\n    \n    finally:\n        print(\"Unreal process completed and has been closed.\")\n\nunreal_exe_path = input_data[\"unreal_exe\"]\nuproject_path = input_data[\"unreal_project\"]\npython_script = input_data[\"shader_script\"]\nopen_unreal_and_run_script(unreal_exe_path, uproject_path, python_script)\n\n\n"
+                    }
+                ]
+            },
+            "op_code": 24
+        },
+        {
+            "id": 1702525864976,
+            "title": "Read file",
+            "customTitle": "Read file",
+            "pos_x": -40.5,
+            "pos_y": -237.25,
+            "inputs": [],
+            "outputs": [
+                {
+                    "id": 1702525865168,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 2
+                }
+            ],
+            "content": {
+                "widget": [
+                    {
+                        "type": "text_field",
+                        "label": "Attribute name:",
+                        "default": "shader_script",
+                        "key": "AttributeName"
+                    },
+                    {
+                        "type": "custom_edit_browse",
+                        "default": "C:/pipeline/PROD/iterCmds/1.0.1/iterCmds/create_shaders.py",
+                        "key": "customEditBrowse"
+                    }
+                ]
+            },
+            "op_code": 32
+        },
+        {
+            "id": 1702525794432,
+            "title": "Read file",
+            "customTitle": "Read file",
+            "pos_x": -322.5,
+            "pos_y": -124.5,
+            "inputs": [],
+            "outputs": [
+                {
+                    "id": 1702525876544,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 2
+                }
+            ],
+            "content": {
+                "widget": [
+                    {
+                        "type": "text_field",
+                        "label": "Attribute name:",
+                        "default": "unreal_exe",
+                        "key": "AttributeName"
+                    },
+                    {
+                        "type": "custom_edit_browse",
+                        "default": "C:/Program Files/Epic Games/UE_5.4/Engine/Binaries/Win64/UnrealEditor.exe",
+                        "key": "customEditBrowse"
+                    }
+                ]
+            },
+            "op_code": 32
+        },
+        {
+            "id": 1702525794624,
+            "title": "Read file",
+            "customTitle": "Read file",
+            "pos_x": -328.5,
+            "pos_y": 88.5,
+            "inputs": [],
+            "outputs": [
+                {
+                    "id": 1702525874864,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 2
+                }
+            ],
+            "content": {
+                "widget": [
+                    {
+                        "type": "text_field",
+                        "label": "Attribute name:",
+                        "default": "unreal_project",
+                        "key": "AttributeName"
+                    },
+                    {
+                        "type": "custom_edit_browse",
+                        "default": "C:/Users/felix/OneDrive/Documents/Unreal Projects/meta_calibration/meta_calibration.uproject",
+                        "key": "customEditBrowse"
+                    }
+                ]
+            },
+            "op_code": 32
+        },
+        {
+            "id": 1702525876832,
+            "title": "Merge",
+            "customTitle": "Merge",
+            "pos_x": 218.75,
+            "pos_y": -143.0,
+            "inputs": [
+                {
+                    "id": 1702525875152,
+                    "index": 0,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 2
+                },
+                {
+                    "id": 1702525875248,
+                    "index": 1,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 2
+                }
+            ],
+            "outputs": [
+                {
+                    "id": 1702525876736,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 2
+                }
+            ],
+            "content": {
+                "widget": []
+            },
+            "op_code": 2
+        },
+        {
+            "id": 1702525877792,
+            "title": "Merge",
+            "customTitle": "Merge",
+            "pos_x": -41.5,
+            "pos_y": -37.5,
+            "inputs": [
+                {
+                    "id": 1702526206592,
+                    "index": 0,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 2
+                },
+                {
+                    "id": 1702526206640,
+                    "index": 1,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 2
+                }
+            ],
+            "outputs": [
+                {
+                    "id": 1702526206688,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 2
+                }
+            ],
+            "content": {
+                "widget": []
+            },
+            "op_code": 2
+        },
+        {
+            "id": 1702526213888,
+            "title": "Run nodes",
+            "customTitle": "Run nodes",
+            "pos_x": 580.0,
+            "pos_y": -142.5,
+            "inputs": [
+                {
+                    "id": 1702526215376,
+                    "index": 0,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 5
+                }
+            ],
+            "outputs": [],
+            "content": {
+                "widget": [
+                    {
+                        "type": "big_push_button",
+                        "key": "run_button",
+                        "label": "Run connected node tree."
+                    }
+                ]
+            },
+            "op_code": 3
+        }
+    ],
+    "edges": [
+        {
+            "id": 1702525876592,
+            "edge_type": 2,
+            "start": 1702525865168,
+            "end": 1702525875152
+        },
+        {
+            "id": 1702525876928,
+            "edge_type": 2,
+            "start": 1702525876736,
+            "end": 1702525780416
+        },
+        {
+            "id": 1702526206736,
+            "edge_type": 2,
+            "start": 1702525876544,
+            "end": 1702526206592
+        },
+        {
+            "id": 1702526206784,
+            "edge_type": 2,
+            "start": 1702526206688,
+            "end": 1702525875248
+        },
+        {
+            "id": 1702526207984,
+            "edge_type": 2,
+            "start": 1702525874864,
+            "end": 1702526206640
+        },
+        {
+            "id": 1702526215616,
+            "edge_type": 2,
+            "start": 1702525780464,
+            "end": 1702526215376
+        }
+    ]
+}

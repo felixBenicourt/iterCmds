@@ -1,0 +1,69 @@
+{
+    "id": 2786399611456,
+    "scene_width": 64000,
+    "scene_height": 64000,
+    "nodes": [
+        {
+            "id": 2786399608960,
+            "title": "Add value",
+            "customTitle": "Add value",
+            "pos_x": -60.0,
+            "pos_y": -157.0,
+            "inputs": [
+                {
+                    "id": 2786399610880,
+                    "index": 0,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 2
+                },
+                {
+                    "id": 2786399610688,
+                    "index": 1,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 2
+                }
+            ],
+            "outputs": [
+                {
+                    "id": 2786399610640,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 2
+                }
+            ],
+            "content": {
+                "widget": [
+                    {
+                        "type": "text_field",
+                        "label": "Attribute:",
+                        "default": "",
+                        "key": "editAttributeName"
+                    },
+                    {
+                        "type": "text_field",
+                        "label": "Value:",
+                        "default": "",
+                        "key": "editCurrentValue"
+                    },
+                    {
+                        "type": "text_field",
+                        "label": "Pre value:",
+                        "default": "",
+                        "key": "editNewvalue"
+                    },
+                    {
+                        "type": "text_field",
+                        "label": "Post value:",
+                        "default": "",
+                        "key": "editPostvalue"
+                    }
+                ]
+            },
+            "op_code": 12
+        }
+    ],
+    "edges": []
+}

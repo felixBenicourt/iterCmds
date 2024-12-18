@@ -1,0 +1,198 @@
+{
+    "id": 1999333260688,
+    "scene_width": 64000,
+    "scene_height": 64000,
+    "nodes": [
+        {
+            "id": 1999333063024,
+            "title": "Read file",
+            "customTitle": "Read file",
+            "pos_x": -73.12500000000003,
+            "pos_y": -335.25,
+            "inputs": [],
+            "outputs": [
+                {
+                    "id": 1999333489344,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 2
+                }
+            ],
+            "content": {
+                "widget": [
+                    {
+                        "type": "text_field",
+                        "label": "Attribute name:",
+                        "default": "file path",
+                        "key": "AttributeName"
+                    },
+                    {
+                        "type": "custom_edit_browse",
+                        "default": "D:/college_bois_de_boulogne/A3d BdeB/remises/texture/groupe02/tp02/OneDrive_1_10-11-2024/Villeneuve_Edouard/2374183_TechT_02/scenes/2374183_Phlox.ma",
+                        "key": "customEditBrowse"
+                    }
+                ]
+            },
+            "op_code": 32
+        },
+        {
+            "id": 1999333323344,
+            "title": "Merge",
+            "customTitle": "Merge",
+            "pos_x": 174.5,
+            "pos_y": -253.0,
+            "inputs": [
+                {
+                    "id": 1999333488816,
+                    "index": 0,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 2
+                },
+                {
+                    "id": 1999333488864,
+                    "index": 1,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 2
+                }
+            ],
+            "outputs": [
+                {
+                    "id": 1999333488912,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 2
+                }
+            ],
+            "content": {
+                "widget": []
+            },
+            "op_code": 2
+        },
+        {
+            "id": 1999333575744,
+            "title": "Python server instances",
+            "customTitle": "Python server instances",
+            "pos_x": -78.25000000000003,
+            "pos_y": -150.5,
+            "inputs": [],
+            "outputs": [
+                {
+                    "id": 1999333576800,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 1
+                }
+            ],
+            "content": {
+                "widget": [
+                    {
+                        "type": "instances_server",
+                        "key": "instances",
+                        "default": [
+                            [
+                                "maya.exe",
+                                2960
+                            ]
+                        ]
+                    }
+                ]
+            },
+            "op_code": 30
+        },
+        {
+            "id": 1999333676544,
+            "title": "Python server maya",
+            "customTitle": "Python server maya",
+            "pos_x": 358.0,
+            "pos_y": -252.0,
+            "inputs": [
+                {
+                    "id": 1999333676784,
+                    "index": 0,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 1
+                }
+            ],
+            "outputs": [
+                {
+                    "id": 1999333677072,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 1
+                }
+            ],
+            "content": {
+                "widget": [
+                    {
+                        "type": "text_editor",
+                        "label": "Python Code Editor",
+                        "key": "python_code",
+                        "default": "import maya.cmds as cmds\n\ncmds.file(variables['file path'], i=True)\n\n"
+                    }
+                ]
+            },
+            "op_code": 29
+        },
+        {
+            "id": 1999333680432,
+            "title": "Run nodes",
+            "customTitle": "Run nodes",
+            "pos_x": 535.0000000000001,
+            "pos_y": -251.75000000000003,
+            "inputs": [
+                {
+                    "id": 1999333681200,
+                    "index": 0,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 5
+                }
+            ],
+            "outputs": [],
+            "content": {
+                "widget": [
+                    {
+                        "type": "big_push_button",
+                        "key": "run_button",
+                        "label": "Run connected node tree.",
+                        "default": true
+                    }
+                ]
+            },
+            "op_code": 3
+        }
+    ],
+    "edges": [
+        {
+            "id": 1999333674432,
+            "edge_type": 2,
+            "start": 1999333576800,
+            "end": 1999333488864
+        },
+        {
+            "id": 1999333678080,
+            "edge_type": 2,
+            "start": 1999333488912,
+            "end": 1999333676784
+        },
+        {
+            "id": 1999333681248,
+            "edge_type": 2,
+            "start": 1999333677072,
+            "end": 1999333681200
+        },
+        {
+            "id": 1999397133408,
+            "edge_type": 2,
+            "start": 1999333489344,
+            "end": 1999333488816
+        }
+    ]
+}

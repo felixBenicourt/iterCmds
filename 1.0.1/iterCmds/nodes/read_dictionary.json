@@ -1,0 +1,40 @@
+{
+    "id": 1588488501808,
+    "scene_width": 64000,
+    "scene_height": 64000,
+    "nodes": [
+        {
+            "id": 1588488500512,
+            "title": "Read dictionary",
+            "customTitle": "Read dictionary",
+            "pos_x": -98.0,
+            "pos_y": -154.0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "id": 1588488503104,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 2
+                }
+            ],
+            "content": {
+                "widget": [
+                    {
+                        "type": "custom_edit_browse",
+                        "default": "",
+                        "key": "customEditBrowse"
+                    },
+                    {
+                        "type": "big_push_button",
+                        "key": "load_dict_content",
+                        "label": "load dictionary content."
+                    }
+                ]
+            },
+            "op_code": 9
+        }
+    ],
+    "edges": []
+}

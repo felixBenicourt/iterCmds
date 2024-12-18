@@ -1,0 +1,118 @@
+{
+    "id": 2031652159296,
+    "scene_width": 64000,
+    "scene_height": 64000,
+    "nodes": [
+        {
+            "id": 2031652371280,
+            "title": "Read file",
+            "customTitle": "Read file",
+            "pos_x": 285.0,
+            "pos_y": -134.0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "id": 2031652371472,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 2
+                }
+            ],
+            "content": {
+                "widget": [
+                    {
+                        "type": "text_field",
+                        "label": "Attribute name:",
+                        "default": "path",
+                        "key": "AttributeName"
+                    },
+                    {
+                        "type": "custom_edit_browse",
+                        "default": "C:/pipeline/PROD/iterCmds/1.0.1/iterCmds/CONSTANTS.json",
+                        "key": "customEditBrowse"
+                    }
+                ]
+            },
+            "op_code": 32
+        },
+        {
+            "id": 2031652452000,
+            "title": "Run nodes",
+            "customTitle": "Run nodes",
+            "pos_x": 653.0,
+            "pos_y": -136.0,
+            "inputs": [
+                {
+                    "id": 2031652451664,
+                    "index": 0,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 5
+                }
+            ],
+            "outputs": [],
+            "content": {
+                "widget": [
+                    {
+                        "type": "big_push_button",
+                        "key": "run_button",
+                        "label": "Run connected node tree.",
+                        "default": true
+                    }
+                ]
+            },
+            "op_code": 3
+        },
+        {
+            "id": 2300504519056,
+            "title": "Python Iter",
+            "customTitle": "Python Iter",
+            "pos_x": 474.0,
+            "pos_y": -135.0,
+            "inputs": [
+                {
+                    "id": 2300505047776,
+                    "index": 0,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 1
+                }
+            ],
+            "outputs": [
+                {
+                    "id": 2300505047824,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 1
+                }
+            ],
+            "content": {
+                "widget": [
+                    {
+                        "type": "text_editor",
+                        "label": "Python Code Editor",
+                        "key": "python_code",
+                        "default": "\nfrom commands import iter_instance\n\niter_instance.fileLoad(input_data['path'])\n\nechoNode = iter_instance.getNodeFromCustomName(\"Echo var\")\n\nif echoNode:\n    print({'test':echoNode.calcAttributes()})\nelse:\n    print({'test':None})"
+                    }
+                ]
+            },
+            "op_code": 24
+        }
+    ],
+    "edges": [
+        {
+            "id": 2300505225488,
+            "edge_type": 2,
+            "start": 2031652371472,
+            "end": 2300505047776
+        },
+        {
+            "id": 2300505049504,
+            "edge_type": 2,
+            "start": 2300505047824,
+            "end": 2031652451664
+        }
+    ]
+}
