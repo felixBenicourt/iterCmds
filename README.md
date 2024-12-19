@@ -77,12 +77,12 @@ rez env iterCmds -- sceneRunner --lpa get_element_mysql
 
 ### Example 2: Run a Node
 ```bash
-rez env iterCmds -- sceneRunner --run "Run nodes"
+rez env iterCmds -- sceneRunner --lpa get_element_mysql --run Run nodes
 ```
 
 ### Example 3: Fetch Attributes of a Node
 ```bash
-rez env iterCmds -- sceneRunner --node "Echo stream attributes"
+rez env iterCmds -- sceneRunner --lpa get_element_mysql --node Echo stream attributes
 ```
 
 For further questions, feel free to contact the repository maintainer.
