@@ -87,4 +87,14 @@ C:\Windows\System32>rez env iterCmds -- sceneRunner --lpa python_iter --run Run 
 
 This output shows the parsed attributes from the **Echo Stream Attribute Node** along with the corresponding path and key-value pairs.
 
---- 
+What's particularly interesting about this process is the following line from the output:
+
+```bash
+2024-12-19 17:08:32,470 - DEBUG - Node attributes: {2236866897584: {'path': 'C:/pipeline/PROD/iterCmds/1.0.2/iterCmds/CONSTANTS.json', 'test': {'path_constants': 'C:\HOME\proj\template', 'root_constants': 'C:\HOME\proj', 'name_constants': 'template'}}}
+```
+
+In this case, we opened the **python_iter** scene, which contains a node graph that uses a Python script with the Iter API. This script loads the **CONSTANTS** scene, retrieves the variables, and then echoes them. The key point here is how the IterCmds API is leveraged to access the scene data, and how the attributes of the nodes, including their key-value pairs, are fetched and printed in the debug output. The Echo Stream Attribute Node provides a convenient way to view the parsed node attributes, which include paths and key-value pairs—critical pieces of data for further processing or manipulation.
+
+
+
+
