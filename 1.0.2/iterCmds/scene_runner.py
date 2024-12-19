@@ -10,8 +10,7 @@ from commands import iter_instance
 
 """
 rez env iterCmds -- sceneRunner --lpa get_element_mysql --run Run nodes --node Echo stream attributes
-rez env iterCmds -- sceneRunner --lpa get_element_mysql --run Run nodes --node test
-rez env iterCmds -- sceneRunner --lpa get_element_mysql --node Run nodes
+rez env iterCmds -- sceneRunner --lpa python_iter --run Run nodes --node Echo stream attributes
 """
 
 
