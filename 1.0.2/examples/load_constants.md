@@ -8,15 +8,6 @@
 
 ---
 
-## Table of Contents
-
-- [Step 1](#Step1)
-- [Step 2](#Step2)
-- [Step 3](#Step3)
-- [Output](#Output)
-
----
-
 ## Example: Creating a Scene and Accessing Node Variables
 
 This example demonstrates how IterCmds is designed to interact with scenes using commands with arguments.
