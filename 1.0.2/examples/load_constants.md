@@ -4,7 +4,7 @@
 ## Pages
 
 1. [README](../../README.md)
-2. [examples]
+2. examples
    - [Node Graph Logic](./load_constants.md)
 
 ---
