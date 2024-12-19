@@ -5,7 +5,89 @@ Additional documentation and specific examples will be provided in the future.
 
 ## Table of Contents
 
+- [Runner](#Runner)
+- [Features](#Features)
+- [Prerequisites](#Prerequisites)
+- [Installation](#Installation)
+- [Usage](#Usage)
+- [Examples](#Examples)
 - [License](#license)
+
+
+# Runner
+
+`scene_runner` is a command-line tool to load scenes, run specific nodes, and fetch attributes of nodes in the ITER API.
+
+## Features
+
+- Load scenes from a local or specified path.
+- Execute nodes by name.
+- Retrieve and display attributes of specific nodes.
+- Log all operations to a file and the console.
+
+## Prerequisites
+
+- Python 3.x
+- ITER package installed and configured.
+
+## Installation
+
+Clone this repository and ensure that the required dependencies and ITER framework are properly set up in your environment.
+
+```bash
+# Clone the repository
+git clone <repository-url>
+cd <repository-folder>
+```
+
+## Usage
+
+Run the script using the following commands:
+
+### Load Scene from Local Path
+```bash
+rez env iterCmds -- sceneRunner --lpa <local_path_to_scene>
+```
+- **`<local_path_to_scene>`**: The relative path to the scene (without `.json` extension).
+
+### Load Scene from Specified Path
+```bash
+rez env iterCmds -- sceneRunner --pa <path_to_scene>
+```
+- **`<path_to_scene>`**: The full path to the scene file.
+
+### Run Specific Nodes
+```bash
+rez env iterCmds -- sceneRunner --run <node_name>
+```
+- **`<node_name>`**: The name of the node to be executed.
+
+### Fetch Node Attributes
+```bash
+rez env iterCmds -- sceneRunner --node <node_name>
+```
+- **`<node_name>`**: The name of the node whose attributes are to be displayed.
+
+## Examples
+
+### Example 1: Load a Scene from Local Path
+```bash
+rez env iterCmds -- sceneRunner --lpa get_element_mysql
+```
+
+### Example 2: Run a Node
+```bash
+rez env iterCmds -- sceneRunner --run "Run nodes"
+```
+
+### Example 3: Fetch Attributes of a Node
+```bash
+rez env iterCmds -- sceneRunner --node "Echo stream attributes"
+```
+
+For further questions, feel free to contact the repository maintainer.
+
+---
 
 ## License
 
