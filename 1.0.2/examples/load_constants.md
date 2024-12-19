@@ -76,10 +76,6 @@ C:\Windows\System32>rez env iterCmds -- sceneRunner --lpa python_iter --run Run 
 2024-12-19 17:08:31,705 - DEBUG - List of nodes: ['Read file'] is going to be evaluated
 2024-12-19 17:08:31,705 - DEBUG - Connected node: Read file named Read file is going to be evaluated
 2024-12-19 17:08:31,707 - DEBUG - Input reference node info: {'path': 'C:/pipeline/PROD/iterCmds/1.0.2/iterCmds/CONSTANTS.json'}
-2024-12-19 17:08:32,467 - DEBUG - Executed commands: CompletedProcess(args=['python', 'c:\pipeline\prod\iter\1.1.0\iter\examples\dev_iter\nodes\iterScriptNodes\evalPythonIter.py', 'C:\Users\felix\AppData\Local\Temp\tmpqybh01hp.py', '{"path": "C:/pipeline/PROD/iterCmds/1.0.2/iterCmds/CONSTANTS.json"}', 'c:\pipeline\prod\iter\1.1.0\iter\examples\dev_iter'], returncode=0, stdout='{"output": "{'test': {'path_constants': 'C:\\\\HOME\\\\proj\\\\template', 'root_constants': 'C:\\\\HOME\\\\proj', 'name_constants': 'template'}}\n"}
-', stderr='QLayout: Attempting to add QLayout "" to CalcConstantContent "", which already has a layout
-QLayout: Attempting to add QLayout "" to CalcConstantContent "", which already has a layout
-')
 2024-12-19 17:08:32,467 - DEBUG - Received output from subprocess: {"output": "{'test': {'path_constants': 'C:\\HOME\\proj\\template', 'root_constants': 'C:\\HOME\\proj', 'name_constants': 'template'}}
 "}
 2024-12-19 17:08:32,468 - DEBUG - Parsed nested dictionary successfully: {'test': {'path_constants': 'C:\HOME\proj\template', 'root_constants': 'C:\HOME\proj', 'name_constants': 'template'}}
