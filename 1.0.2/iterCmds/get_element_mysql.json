@@ -1,0 +1,392 @@
+{
+    "id": 2241242929888,
+    "scene_width": 64000,
+    "scene_height": 64000,
+    "nodes": [
+        {
+            "id": 2241243340544,
+            "title": "Constant",
+            "customTitle": "db name",
+            "pos_x": -631.875,
+            "pos_y": -474.0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "id": 2241243344672,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 2
+                }
+            ],
+            "content": {
+                "widget": [
+                    {
+                        "type": "text_field",
+                        "label": "Attribute Name:",
+                        "default": "db_name",
+                        "key": "editAttributeName"
+                    },
+                    {
+                        "type": "text_field",
+                        "label": "Attribute Value:",
+                        "default": "home_db",
+                        "key": "editCurrentValue"
+                    }
+                ]
+            },
+            "op_code": 1
+        },
+        {
+            "id": 2241243344864,
+            "title": "Constant",
+            "customTitle": "task name",
+            "pos_x": -626.25,
+            "pos_y": 23.499999999999886,
+            "inputs": [],
+            "outputs": [
+                {
+                    "id": 2241243345296,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 2
+                }
+            ],
+            "content": {
+                "widget": [
+                    {
+                        "type": "text_field",
+                        "label": "Attribute Name:",
+                        "default": "task_name",
+                        "key": "editAttributeName"
+                    },
+                    {
+                        "type": "text_field",
+                        "label": "Attribute Value:",
+                        "default": "rig",
+                        "key": "editCurrentValue"
+                    }
+                ]
+            },
+            "op_code": 1
+        },
+        {
+            "id": 2241243345488,
+            "title": "Merge",
+            "customTitle": "test",
+            "pos_x": -122.50000000000023,
+            "pos_y": -234.296875,
+            "inputs": [
+                {
+                    "id": 2241243345920,
+                    "index": 0,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 2
+                },
+                {
+                    "id": 2241243345968,
+                    "index": 1,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 2
+                }
+            ],
+            "outputs": [
+                {
+                    "id": 2241243346016,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 2
+                }
+            ],
+            "content": {
+                "widget": []
+            },
+            "op_code": 2
+        },
+        {
+            "id": 2241243346496,
+            "title": "Merge",
+            "customTitle": "Merge",
+            "pos_x": -406.25,
+            "pos_y": -60.75000000000014,
+            "inputs": [
+                {
+                    "id": 2241243346832,
+                    "index": 0,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 2
+                },
+                {
+                    "id": 2241243346880,
+                    "index": 1,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 2
+                }
+            ],
+            "outputs": [
+                {
+                    "id": 2241243346928,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 2
+                }
+            ],
+            "content": {
+                "widget": []
+            },
+            "op_code": 2
+        },
+        {
+            "id": 2241243136640,
+            "title": "Constant",
+            "customTitle": "asset name",
+            "pos_x": -626.25,
+            "pos_y": -141.5,
+            "inputs": [],
+            "outputs": [
+                {
+                    "id": 2241243136496,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 2
+                }
+            ],
+            "content": {
+                "widget": [
+                    {
+                        "type": "text_field",
+                        "label": "Attribute Name:",
+                        "default": "asset_name",
+                        "key": "editAttributeName"
+                    },
+                    {
+                        "type": "text_field",
+                        "label": "Attribute Value:",
+                        "default": "thanos",
+                        "key": "editCurrentValue"
+                    }
+                ]
+            },
+            "op_code": 1
+        },
+        {
+            "id": 2241243136544,
+            "title": "Python Iter",
+            "customTitle": "get asset",
+            "pos_x": 37.828124999999886,
+            "pos_y": -234.25000000000006,
+            "inputs": [
+                {
+                    "id": 2241243136160,
+                    "index": 0,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 1
+                }
+            ],
+            "outputs": [
+                {
+                    "id": 2241242931328,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 1
+                }
+            ],
+            "content": {
+                "widget": [
+                    {
+                        "type": "text_editor",
+                        "label": "Python Code Editor",
+                        "key": "python_code",
+                        "default": "\n\nfrom k_mysql.mysql_wrapper import MySQLDatabase\n\n\ndb_class = MySQLDatabase(\n    \"localhost\", \n    \"root\", \n    \"\", \n    input_data['db_name']\n)\n\n\nassets = db_class.get_elements_by_name(\n    table_name = input_data['table_name'],\n    name_column = \"name\",\n    name_value = input_data[\"asset_name\"]\n)\n\n\nfiltered = db_class.filter_dicts(\n    assets,\n    \"task\",\n    input_data[\"task_name\"])\n\nlatest = db_class.get_highest_value(\n    filtered,\n    \"version\"\n)\n\nprint({\"asset\":latest})\n\ndb_class.disconnect()\n\n\n"
+                    }
+                ]
+            },
+            "op_code": 24
+        },
+        {
+            "id": 2241242930080,
+            "title": "Merge",
+            "customTitle": "Merge",
+            "pos_x": -416.5624999999998,
+            "pos_y": -395.2499999999998,
+            "inputs": [
+                {
+                    "id": 2241242930272,
+                    "index": 0,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 2
+                },
+                {
+                    "id": 2241242930032,
+                    "index": 1,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 2
+                }
+            ],
+            "outputs": [
+                {
+                    "id": 2241242929552,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 2
+                }
+            ],
+            "content": {
+                "widget": []
+            },
+            "op_code": 2
+        },
+        {
+            "id": 2241242897072,
+            "title": "Constant",
+            "customTitle": "table name",
+            "pos_x": -626.8749999999995,
+            "pos_y": -310.0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "id": 2241243136208,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 2
+                }
+            ],
+            "content": {
+                "widget": [
+                    {
+                        "type": "text_field",
+                        "label": "Attribute Name:",
+                        "default": "table_name",
+                        "key": "editAttributeName"
+                    },
+                    {
+                        "type": "text_field",
+                        "label": "Attribute Value:",
+                        "default": "asset",
+                        "key": "editCurrentValue"
+                    }
+                ]
+            },
+            "op_code": 1
+        },
+        {
+            "id": 2241294679968,
+            "title": "Echo stream attributes",
+            "customTitle": "Echo stream attributes",
+            "pos_x": 259.73779296875,
+            "pos_y": -155.98144531250006,
+            "inputs": [
+                {
+                    "id": 2241295253712,
+                    "index": 0,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 5
+                }
+            ],
+            "outputs": [],
+            "content": {
+                "widget": []
+            },
+            "op_code": 18
+        },
+        {
+            "id": 2241344868304,
+            "title": "Run nodes",
+            "customTitle": "Run nodes",
+            "pos_x": 260.08154296875,
+            "pos_y": -323.7001953125,
+            "inputs": [
+                {
+                    "id": 2241344867968,
+                    "index": 0,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 5
+                }
+            ],
+            "outputs": [],
+            "content": {
+                "widget": [
+                    {
+                        "type": "big_push_button",
+                        "key": "run_button",
+                        "label": "Run connected node tree.",
+                        "default": true
+                    }
+                ]
+            },
+            "op_code": 3
+        }
+    ],
+    "edges": [
+        {
+            "id": 2241242930512,
+            "edge_type": 2,
+            "start": 2241243345296,
+            "end": 2241243346880
+        },
+        {
+            "id": 2241242930464,
+            "edge_type": 2,
+            "start": 2241243346928,
+            "end": 2241243345968
+        },
+        {
+            "id": 2241242938816,
+            "edge_type": 2,
+            "start": 2241243136496,
+            "end": 2241243346832
+        },
+        {
+            "id": 2241242931136,
+            "edge_type": 2,
+            "start": 2241243346016,
+            "end": 2241243136160
+        },
+        {
+            "id": 2241242929744,
+            "edge_type": 2,
+            "start": 2241243344672,
+            "end": 2241242930272
+        },
+        {
+            "id": 2241242929984,
+            "edge_type": 2,
+            "start": 2241242929552,
+            "end": 2241243345920
+        },
+        {
+            "id": 2241243340832,
+            "edge_type": 2,
+            "start": 2241243136208,
+            "end": 2241242930032
+        },
+        {
+            "id": 2241243138128,
+            "edge_type": 2,
+            "start": 2241242931328,
+            "end": 2241344867968
+        },
+        {
+            "id": 2241243138272,
+            "edge_type": 2,
+            "start": 2241242931328,
+            "end": 2241295253712
+        }
+    ]
+}

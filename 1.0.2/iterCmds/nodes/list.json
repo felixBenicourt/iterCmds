@@ -1,0 +1,48 @@
+{
+    "id": 2786253528400,
+    "scene_width": 64000,
+    "scene_height": 64000,
+    "nodes": [
+        {
+            "id": 2786399609824,
+            "title": "List",
+            "customTitle": "List",
+            "pos_x": -27.0,
+            "pos_y": -194.0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "id": 2786399610400,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 2
+                }
+            ],
+            "content": {
+                "widget": [
+                    {
+                        "type": "text_field",
+                        "label": "Attribute Name:",
+                        "default": "",
+                        "key": "AttributeName"
+                    },
+                    {
+                        "type": "text_field",
+                        "label": "Separator:",
+                        "default": ",",
+                        "key": "Separator"
+                    },
+                    {
+                        "type": "text_field",
+                        "label": "Liste:",
+                        "default": "",
+                        "key": "list"
+                    }
+                ]
+            },
+            "op_code": 4
+        }
+    ],
+    "edges": []
+}

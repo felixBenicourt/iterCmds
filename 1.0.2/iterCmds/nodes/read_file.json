@@ -1,0 +1,41 @@
+{
+    "id": 1588389442320,
+    "scene_width": 64000,
+    "scene_height": 64000,
+    "nodes": [
+        {
+            "id": 1588489178032,
+            "title": "Read file",
+            "customTitle": "Read file",
+            "pos_x": -129.0,
+            "pos_y": -190.0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "id": 1588489177792,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 2
+                }
+            ],
+            "content": {
+                "widget": [
+                    {
+                        "type": "text_field",
+                        "label": "Attribute name:",
+                        "default": "",
+                        "key": "AttributeName"
+                    },
+                    {
+                        "type": "custom_edit_browse",
+                        "default": "",
+                        "key": "customEditBrowse"
+                    }
+                ]
+            },
+            "op_code": 32
+        }
+    ],
+    "edges": []
+}

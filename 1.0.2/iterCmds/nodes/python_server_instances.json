@@ -1,0 +1,34 @@
+{
+    "id": 2786399342640,
+    "scene_width": 64000,
+    "scene_height": 64000,
+    "nodes": [
+        {
+            "id": 2786398887632,
+            "title": "Python server instances",
+            "customTitle": "Python server instances",
+            "pos_x": 1.0,
+            "pos_y": -134.0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "id": 2786398887872,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 1
+                }
+            ],
+            "content": {
+                "widget": [
+                    {
+                        "type": "instances_server",
+                        "key": "instances"
+                    }
+                ]
+            },
+            "op_code": 30
+        }
+    ],
+    "edges": []
+}
