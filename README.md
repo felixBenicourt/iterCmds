@@ -6,7 +6,7 @@ Additional documentation and specific examples will be provided in the future.
 ## Pages
 
 1. [README](./README.md)
-2. [load constants example](./examples/1.0.2/load_constants.md)
+2. [load constants example](./iterCmds/1.0.2/examples/load_constants.md)
 
 ## Table of Contents
 
