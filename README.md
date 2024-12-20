@@ -90,6 +90,11 @@ rez env iterCmds -- sceneRunner --lpa get_element_mysql --run Run nodes
 rez env iterCmds -- sceneRunner --lpa get_element_mysql --node Echo stream attributes
 ```
 
+### Example 4: Set Attributes node value
+```bash
+rez env iterCmds -- sceneRunner --lpa CONSTANTS --set "root:editAttributeName:value" --set "project:editAttributeName:value" --echo Echo stream attributes
+```
+
 For further questions, feel free to contact the repository maintainer.
 
 ---
