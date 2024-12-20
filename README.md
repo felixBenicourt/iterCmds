@@ -7,6 +7,7 @@ Additional documentation and specific examples will be provided in the future.
 
 1. [README](./README.md)
 2. [load constants example](./1.0.2/examples/load_constants.md)
+3. [MySQL Manipulation](./1.0.2/examples/mysql_info.md)
 
 ## Table of Contents
 
