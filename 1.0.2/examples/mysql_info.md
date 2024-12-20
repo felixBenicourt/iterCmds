@@ -70,10 +70,10 @@ To change the parameter of a node, use the following command:
 rez env iterCmds -- sceneRunner --lpa insert_element_mysql --set "asset name:editAttributeValue:name of the asset" --run Run nodes --echo Echo stream attributes
 ```
 
-Here’s the result at the end:
+Here’s the result at the end for the **get asset**:
 
 ```bash
-2024-12-19 22:36:21,232 - DEBUG - Node attributes: {'db_name': 'home_db', 'project name': 'template', 'project': {'id': 1, 'name': 'template'}, 'asset_name': 'thanos', 'type_name': 'chr', 'task_name': 'rig', 'variation_name': 'main'}
+2024-12-19 22:55:41,764 - DEBUG - Node attributes: {'db_name': 'home_db', 'table_name': 'asset', 'asset_name': 'thanos', 'task_name': 'rig', 'asset': {'id': 5, 'projectId': 1, 'name': 'thanos', 'type': 'chr', 'task': 'rig', 'variation': 'main', 'version': 1, 'status': 'Approved'}}
 ```
 
 ---
