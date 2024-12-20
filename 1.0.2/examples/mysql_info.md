@@ -15,7 +15,6 @@ Additional documentation and specific examples will be provided in the future.
 
 This example demonstrates how **IterCmds** interacts with scenes using commands and arguments. The twist now is that we can use the **k_mysql** package to manipulate the database directly.
 
----
 
 ### Step 1: Create and Configure Nodes in the Scene
 
