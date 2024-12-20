@@ -21,7 +21,7 @@ This example demonstrates how **IterCmds** interacts with scenes using commands 
 
 In this step, we will create a scene named **insert_element_mysql**.
 
-![Step 1](https://i.imgur.com/rpbdtBE.png)
+![Step 1-1](https://i.imgur.com/rpbdtBE.png)
 
 In the **get asset** Python Iter Node script:
 
@@ -76,6 +76,11 @@ Here’s the result at the end for the **get asset**:
 2024-12-19 22:55:41,764 - DEBUG - Node attributes: {'db_name': 'home_db', 'table_name': 'asset', 'asset_name': 'thanos', 'task_name': 'rig', 'asset': {'id': 5, 'projectId': 1, 'name': 'thanos', 'type': 'chr', 'task': 'rig', 'variation': 'main', 'version': 1, 'status': 'Approved'}}
 ```
 
+You can have a better view of the **asset** attribute from the database query with a few nodes:
+
+![Step 1-2](https://i.imgur.com/YjGWhzU.png)
+
+Here, we have filtered the **asset** attribute and displayed its keys and values for better clarity.
 ---
 
 ### Step 2: Create a Scene that Can Get the Data
