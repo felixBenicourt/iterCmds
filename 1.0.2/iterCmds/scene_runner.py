@@ -7,6 +7,13 @@ import logging
 from commands import iter_instance
 
 
+"""
+rez env iterCmds -- sceneRunner --lpa get_element_mysql --run Run nodes --echo Echo stream attributes
+rez env iterCmds -- sceneRunner --lpa python_iter --run Run nodes --echo Echo stream attributes
+rez env iterCmds -- sceneRunner --lpa CONSTANTS --echo Echo stream attributes
+rez env iterCmds -- sceneRunner --lpa CONSTANTS --set "root:editAttributeName:value" --set "project:editAttributeName:value" --echo Echo stream attributes
+"""
+
 logging.basicConfig(
     level=logging.DEBUG,
     format="%(asctime)s - %(levelname)s - %(message)s",
@@ -112,6 +119,10 @@ def main():
         if args.pa:
             load_scene(args.pa)
 
+        if args.set:
+            logging.info("Setting node attributes.")
+            set_node_values(args.set)
+
         if args.run:
             run_command = " ".join(args.run)
             logging.info(f"Executing run command: {run_command}")
@@ -122,9 +133,6 @@ def main():
             logging.info(f"Fetching attributes for node: {node_command}")
             get_node_attributes(node_command)
 
-        if args.set:
-            logging.info("Setting node attributes.")
-            set_node_values(args.set)
 
     except Exception as e:
         logging.error(f"An error occurred: {e}", exc_info=True)
