@@ -78,22 +78,22 @@ rez env iterCmds -- sceneRunner --node <node_name>
 
 ### Example 1: Load a Scene from Local Path
 ```bash
-rez env iterCmds -- sceneRunner --lpa get_element_mysql
+rez env iterCmds -- sceneRunner --lpa <scene_name>
 ```
 
 ### Example 2: Run a Node
 ```bash
-rez env iterCmds -- sceneRunner --lpa get_element_mysql --run Run nodes
+rez env iterCmds -- sceneRunner --lpa <scene_name> --run <node_name>
 ```
 
 ### Example 3: Fetch Attributes of a Node
 ```bash
-rez env iterCmds -- sceneRunner --lpa get_element_mysql --node Echo stream attributes
+rez env iterCmds -- sceneRunner --lpa <scene_name> --node <node_name>
 ```
 
 ### Example 4: Set Attributes node value
 ```bash
-rez env iterCmds -- sceneRunner --lpa CONSTANTS --set "root:editAttributeName:value" --set "project:editAttributeName:value"
+rez env iterCmds -- sceneRunner --lpa <scene_name> --set <"node name:AttributeName:value"> --set <"node name 2:AttributeName:value"?
 ```
 
 For further questions, feel free to contact the repository maintainer.
