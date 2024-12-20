@@ -4,7 +4,8 @@
 ## Pages
 
 1. [README](../../README.md)
-2. [load constants example](./load_constants.md)
+2. [Load Constants Example](./load_constants.md)
+3. [MySQL Manipulation](./mysql_info.md)
 
 ---
 
