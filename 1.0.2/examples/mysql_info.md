@@ -81,6 +81,7 @@ You can have a better view of the **asset** attribute from the database query wi
 ![Step 1-2](https://i.imgur.com/YjGWhzU.png)
 
 Here, we have filtered the **asset** attribute and displayed its keys and values for better clarity.
+
 ---
 
 ### Step 2: Create a Scene that Can Get the Data
