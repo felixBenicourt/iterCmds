@@ -14,7 +14,7 @@ rez env iterCmds -- sceneRunner --lpa CONSTANTS --echo Echo stream attributes
 rez env iterCmds -- sceneRunner --lpa CONSTANTS --set "root:editAttributeName:value" --set "project:editAttributeName:value" --echo Echo stream attributes
 """
 
-# this is anoter test
+# this is a test
 
 logging.basicConfig(
     level=logging.DEBUG,
