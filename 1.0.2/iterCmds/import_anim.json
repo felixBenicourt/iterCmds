@@ -1,0 +1,478 @@
+{
+    "id": 2228617159264,
+    "scene_width": 64000,
+    "scene_height": 64000,
+    "nodes": [
+        {
+            "id": 2228457928784,
+            "title": "Constant",
+            "customTitle": "joint info",
+            "pos_x": -73.19726562500102,
+            "pos_y": 173.85546874999983,
+            "inputs": [],
+            "outputs": [
+                {
+                    "id": 2228457929360,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 2
+                }
+            ],
+            "content": {
+                "widget": [
+                    {
+                        "type": "text_field",
+                        "label": "Attribute Name:",
+                        "default": "joint info",
+                        "key": "editAttributeName"
+                    },
+                    {
+                        "type": "text_field",
+                        "label": "Attribute Value:",
+                        "default": "root",
+                        "key": "editCurrentValue"
+                    }
+                ]
+            },
+            "op_code": 1
+        },
+        {
+            "id": 2228457930128,
+            "title": "Merge",
+            "customTitle": "Merge",
+            "pos_x": 213.85742187500094,
+            "pos_y": 43.34375000000014,
+            "inputs": [
+                {
+                    "id": 2228458097536,
+                    "index": 0,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 2
+                },
+                {
+                    "id": 2228458097248,
+                    "index": 1,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 2
+                }
+            ],
+            "outputs": [
+                {
+                    "id": 2228458097296,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 2
+                }
+            ],
+            "content": {
+                "widget": []
+            },
+            "op_code": 2
+        },
+        {
+            "id": 2468695706064,
+            "title": "Merge",
+            "customTitle": "Merge",
+            "pos_x": -318.5097656250002,
+            "pos_y": 33.667968750000284,
+            "inputs": [
+                {
+                    "id": 2468888218496,
+                    "index": 0,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 2
+                },
+                {
+                    "id": 2468888218400,
+                    "index": 1,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 2
+                }
+            ],
+            "outputs": [
+                {
+                    "id": 2468888218256,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 2
+                }
+            ],
+            "content": {
+                "widget": []
+            },
+            "op_code": 2
+        },
+        {
+            "id": 1973748346656,
+            "title": "Merge",
+            "customTitle": "Merge",
+            "pos_x": 478.7773437499999,
+            "pos_y": -76.45703124999996,
+            "inputs": [
+                {
+                    "id": 1973748454240,
+                    "index": 0,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 2
+                },
+                {
+                    "id": 1973748452800,
+                    "index": 1,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 2
+                }
+            ],
+            "outputs": [
+                {
+                    "id": 1973748454336,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 2
+                }
+            ],
+            "content": {
+                "widget": []
+            },
+            "op_code": 2
+        },
+        {
+            "id": 2779406753440,
+            "title": "Read file",
+            "customTitle": "path fbx",
+            "pos_x": -582.25,
+            "pos_y": 139.125,
+            "inputs": [],
+            "outputs": [
+                {
+                    "id": 2779406753680,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 2
+                }
+            ],
+            "content": {
+                "widget": [
+                    {
+                        "type": "text_field",
+                        "label": "Attribute name:",
+                        "default": "path fbx",
+                        "key": "AttributeName"
+                    },
+                    {
+                        "type": "custom_edit_browse",
+                        "default": "C:/HOME/proj/template/chr/metahuman/rig/ada/Face_Archetype_Skeleton_Sequence.fbx",
+                        "key": "customEditBrowse"
+                    }
+                ]
+            },
+            "op_code": 32
+        },
+        {
+            "id": 1588435484192,
+            "title": "Read dictionary",
+            "customTitle": "Read dictionary",
+            "pos_x": -580.3125000000001,
+            "pos_y": -64.0625,
+            "inputs": [],
+            "outputs": [
+                {
+                    "id": 1588435403824,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 2
+                }
+            ],
+            "content": {
+                "widget": [
+                    {
+                        "type": "custom_edit_browse",
+                        "default": "C:/pipeline/PROD/iterCmds/1.0.1/iterCmds/remape_ctrl_values.json",
+                        "key": "customEditBrowse"
+                    },
+                    {
+                        "type": "big_push_button",
+                        "key": "load_dict_content",
+                        "label": "load dictionary content.",
+                        "default": true
+                    }
+                ]
+            },
+            "op_code": 9
+        },
+        {
+            "id": 1675770837840,
+            "title": "Expose values",
+            "customTitle": "Expose values",
+            "pos_x": -315.625,
+            "pos_y": -166.06249999999994,
+            "inputs": [
+                {
+                    "id": 1675770832704,
+                    "index": 0,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 2
+                }
+            ],
+            "outputs": [
+                {
+                    "id": 1675770833040,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 2
+                }
+            ],
+            "content": {
+                "widget": [
+                    {
+                        "type": "text_field",
+                        "label": "Attribute name:",
+                        "default": "joint",
+                        "key": "AttributeName"
+                    }
+                ]
+            },
+            "op_code": 10
+        },
+        {
+            "id": 1675770827472,
+            "title": "Merge",
+            "customTitle": "Merge",
+            "pos_x": -71.125,
+            "pos_y": -62.75,
+            "inputs": [
+                {
+                    "id": 1675771714896,
+                    "index": 0,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 2
+                },
+                {
+                    "id": 1675771712352,
+                    "index": 1,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 2
+                }
+            ],
+            "outputs": [
+                {
+                    "id": 1675771713216,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 2
+                }
+            ],
+            "content": {
+                "widget": []
+            },
+            "op_code": 2
+        },
+        {
+            "id": 2553856137136,
+            "title": "Python server maya",
+            "customTitle": "Python server Maya",
+            "pos_x": 661.6562499999999,
+            "pos_y": -75.046875,
+            "inputs": [
+                {
+                    "id": 2553856137376,
+                    "index": 0,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 1
+                }
+            ],
+            "outputs": [
+                {
+                    "id": 2553856137424,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 1
+                }
+            ],
+            "content": {
+                "widget": [
+                    {
+                        "type": "text_editor",
+                        "label": "Python Code Editor",
+                        "key": "python_code",
+                        "default": "\n\nimport maya.cmds as cmds\nimport os\nimport logging\n\n\nlogging.basicConfig(level=logging.INFO, format=\"%(asctime)s - %(levelname)s - %(message)s\")\n\n\ntransform_attributes = [\"translateX\", \"translateY\", \"translateZ\", \n                        \"rotateX\", \"rotateY\", \"rotateZ\", \n                        \"scaleX\", \"scaleY\", \"scaleZ\", \"visibility\"]\njoint_info = variables[\"joint info\"]\ncorelation_ctrl = {}\nfiltered_attributes = []\n\n\ndef has_variation_in_animation(attr):\n    keyframes = cmds.keyframe(attr, query=True, valueChange=True)\n    return keyframes is not None and (len(set(keyframes)) > 1 or any(value > 0 for value in keyframes))\n\n\ndef reverse_keys(attribute):\n    key_times = cmds.keyframe(attribute, query=True, timeChange=True)\n    \n    if not key_times:\n        logging.info(\"No keys found for {}\".format(attribute))\n        return\n\n    values = cmds.keyframe(attribute, query=True, valueChange=True)\n    min_value = min(values)\n    max_value = max(values)\n\n    for time in key_times:\n        original_value = cmds.keyframe(attribute, query=True, time=(time,), valueChange=True)[0]\n        reversed_value = max_value - (original_value - min_value)\n        cmds.keyframe(attribute, edit=True, time=(time,), valueChange=reversed_value)\n    logging.info(\"Reversed keys for {}\".format(attribute))\n\n\ndef remap_keys(attribute, min_value=-1, max_value=1):\n    key_times = cmds.keyframe(attribute, query=True, timeChange=True)\n    \n    if not key_times:\n        logging.info(\"No keys found for {}\".format(attribute))\n        return\n\n    values = cmds.keyframe(attribute, query=True, valueChange=True)\n    original_min_value = min(values)\n    original_max_value = max(values)\n\n    original_range = original_max_value - original_min_value\n    remap_range = max_value - min_value\n\n    for time in key_times:\n        original_value = cmds.keyframe(attribute, query=True, time=(time,), valueChange=True)[0]\n        remapped_value = ((original_value - original_min_value) / original_range) * remap_range + min_value  # Remap to custom range\n        cmds.keyframe(attribute, edit=True, time=(time,), valueChange=remapped_value)\n    logging.info(\"Remapped keys for {} to range [{}, {}]\".format(attribute, min_value, max_value))\n\n\ndef import_and_copy_animation(fbx_path):\n    if os.path.exists(fbx_path):\n        cmds.file(fbx_path,\n                  i=True,\n                  type=\"FBX\",\n                  ignoreVersion=True,\n                  ra=True,\n                  mergeNamespacesOnClash=False, \n                  options=\"fbx\",\n                  pr=True,\n                  importTimeRange=\"combine\")\n        logging.info(\"FBX imported successfully from {}\".format(fbx_path))\n    else:\n        logging.error(\"FBX path does not exist: {}\".format(fbx_path))\n        raise FileNotFoundError(\"FBX file not found at the specified path.\")\n\n    if cmds.objExists(joint_info):\n        all_keyable_attrs = cmds.listAttr(joint_info, keyable=True)\n\n        if all_keyable_attrs:\n            for attr in all_keyable_attrs:\n                full_attr_name = \"{}.{}\".format(joint_info, attr)\n                if attr not in transform_attributes and has_variation_in_animation(full_attr_name):\n                    filtered_attributes.append(full_attr_name)\n    logging.info(\"Filtered attributes: {}\".format(filtered_attributes))\n\n    for attr in filtered_attributes:\n        if \"CTRL\" in attr:\n            attr = attr.split(\".\")[-1]\n            expression_node = cmds.ls(\"Ada_full_rig_{}*\".format(attr))\n            if not expression_node:\n                logging.warning(\"No expression node found for attribute: {}\".format(attr))\n                continue\n\n            for node in expression_node:\n                connections = cmds.listConnections(node, d=False, s=True, scn=True, plugs=True)\n                if connections:\n                    logging.info(\"Processing node: {}\".format(node))\n                    logging.info(\"Connections found: {}\".format(connections))\n                    for con in connections:\n                        try:\n                            logging.info(\"Copying keyframes from {}.{} to {}\".format(joint_info, attr, con))\n                            cmds.copyKey(\"{}.{}\".format(joint_info, attr))\n                            cmds.pasteKey(con, option=\"replaceCompletely\")\n                        except Exception as e:\n                            logging.error(\"Failed connection: {} Error: {}\".format(node, str(e)))\n                else:\n                    logging.warning(\"No connections found for node: {}\".format(node))\n\n\nfbx_path = variables[\"path fbx\"]\nimport_and_copy_animation(fbx_path)\n\n\nfor key, val in variables[\"joint\"].items():\n    if val[\"reverse_values\"]:\n        reverse_keys(key)\n    remap_keys(key, min_value=val[\"remape_values\"][0], max_value=val[\"remape_values\"][1])\n\n\ncmds.delete(variables[\"joint info\"])\nlogging.info(\"FBX content removed from the scene.\")\n\n\n\n\n"
+                    }
+                ]
+            },
+            "op_code": 29
+        },
+        {
+            "id": 1767375019680,
+            "title": "Run nodes",
+            "customTitle": "import anim",
+            "pos_x": 940.5,
+            "pos_y": -154.296875,
+            "inputs": [
+                {
+                    "id": 1765329832640,
+                    "index": 0,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 5
+                }
+            ],
+            "outputs": [],
+            "content": {
+                "widget": [
+                    {
+                        "type": "big_push_button",
+                        "key": "run_button",
+                        "label": "Run connected node tree.",
+                        "default": true
+                    }
+                ]
+            },
+            "op_code": 3
+        },
+        {
+            "id": 2228617165024,
+            "title": "Python server instances",
+            "customTitle": "Python server instances",
+            "pos_x": 215.74414062499966,
+            "pos_y": -183.46093750000023,
+            "inputs": [],
+            "outputs": [
+                {
+                    "id": 2228617165168,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 1
+                }
+            ],
+            "content": {
+                "widget": [
+                    {
+                        "type": "instances_server",
+                        "key": "instances",
+                        "default": [
+                            [
+                                "maya.exe",
+                                29976
+                            ]
+                        ]
+                    }
+                ]
+            },
+            "op_code": 30
+        },
+        {
+            "id": 2241342666640,
+            "title": "Echo stream attributes",
+            "customTitle": "Echo stream attributes",
+            "pos_x": 941.0,
+            "pos_y": 31.0,
+            "inputs": [
+                {
+                    "id": 2241243348560,
+                    "index": 0,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 5
+                }
+            ],
+            "outputs": [],
+            "content": {
+                "widget": []
+            },
+            "op_code": 18
+        }
+    ],
+    "edges": [
+        {
+            "id": 2468888222912,
+            "edge_type": 2,
+            "start": 2228457929360,
+            "end": 2228458097248
+        },
+        {
+            "id": 2973752455232,
+            "edge_type": 2,
+            "start": 2228458097296,
+            "end": 1973748452800
+        },
+        {
+            "id": 2779406237168,
+            "edge_type": 2,
+            "start": 2779406753680,
+            "end": 2468888218400
+        },
+        {
+            "id": 1588389389952,
+            "edge_type": 2,
+            "start": 1588435403824,
+            "end": 2468888218496
+        },
+        {
+            "id": 1675770837552,
+            "edge_type": 2,
+            "start": 1588435403824,
+            "end": 1675770832704
+        },
+        {
+            "id": 1675770838368,
+            "edge_type": 2,
+            "start": 2468888218256,
+            "end": 1675771712352
+        },
+        {
+            "id": 1675771714416,
+            "edge_type": 2,
+            "start": 1675770833040,
+            "end": 1675771714896
+        },
+        {
+            "id": 1675771716528,
+            "edge_type": 2,
+            "start": 1675771713216,
+            "end": 2228458097536
+        },
+        {
+            "id": 2553856144048,
+            "edge_type": 2,
+            "start": 1973748454336,
+            "end": 2553856137376
+        },
+        {
+            "id": 1765329838640,
+            "edge_type": 2,
+            "start": 2553856137424,
+            "end": 1765329832640
+        },
+        {
+            "id": 2973751959728,
+            "edge_type": 2,
+            "start": 2228617165168,
+            "end": 1973748454240
+        },
+        {
+            "id": 2241294677568,
+            "edge_type": 2,
+            "start": 2553856137424,
+            "end": 2241243348560
+        }
+    ]
+}

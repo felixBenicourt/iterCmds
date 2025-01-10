@@ -1,0 +1,63 @@
+{
+    "id": 2786399342688,
+    "scene_width": 64000,
+    "scene_height": 64000,
+    "nodes": [
+        {
+            "id": 2786399345712,
+            "title": "Edit value",
+            "customTitle": "Edit value",
+            "pos_x": -60.0,
+            "pos_y": -191.0,
+            "inputs": [
+                {
+                    "id": 2786399613520,
+                    "index": 0,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 2
+                },
+                {
+                    "id": 2786399613664,
+                    "index": 1,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 2
+                }
+            ],
+            "outputs": [
+                {
+                    "id": 2786399613232,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 2
+                }
+            ],
+            "content": {
+                "widget": [
+                    {
+                        "type": "text_field",
+                        "label": "Attribute:",
+                        "default": "",
+                        "key": "AttributeName"
+                    },
+                    {
+                        "type": "text_field",
+                        "label": "Current Value:",
+                        "default": "",
+                        "key": "CurrentValue"
+                    },
+                    {
+                        "type": "text_field",
+                        "label": "New value:",
+                        "default": "",
+                        "key": "Newvalue"
+                    }
+                ]
+            },
+            "op_code": 11
+        }
+    ],
+    "edges": []
+}
