@@ -323,8 +323,8 @@
             "id": 1767375019680,
             "title": "Run nodes",
             "customTitle": "import anim",
-            "pos_x": 940.5,
-            "pos_y": -154.296875,
+            "pos_x": 1211.7499999999995,
+            "pos_y": -161.796875,
             "inputs": [
                 {
                     "id": 1765329832640,
@@ -383,8 +383,8 @@
             "id": 2241342666640,
             "title": "Echo stream attributes",
             "customTitle": "Echo stream attributes",
-            "pos_x": 941.0,
-            "pos_y": 31.0,
+            "pos_x": 1212.2499999999995,
+            "pos_y": 23.5,
             "inputs": [
                 {
                     "id": 2241243348560,
@@ -399,6 +399,42 @@
                 "widget": []
             },
             "op_code": 18
+        },
+        {
+            "id": 2138383360800,
+            "title": "Python server Maya",
+            "customTitle": "Python server Maya",
+            "pos_x": 848.4999999999995,
+            "pos_y": -73.99999999999994,
+            "inputs": [
+                {
+                    "id": 2138383361040,
+                    "index": 0,
+                    "multi_edges": false,
+                    "position": 2,
+                    "socket_type": 1
+                }
+            ],
+            "outputs": [
+                {
+                    "id": 2138383361088,
+                    "index": 0,
+                    "multi_edges": true,
+                    "position": 5,
+                    "socket_type": 1
+                }
+            ],
+            "content": {
+                "widget": [
+                    {
+                        "type": "text_editor",
+                        "label": "Python Code Editor",
+                        "key": "python_code",
+                        "default": "import maya.cmds as cmds\n\nobject_name = \"imagePlane1\"\n\nif cmds.objExists(object_name):\n    cmds.setAttr(\"{}.visibility\".format(object_name), True)\n\n\ncmds.playbackOptions(animationStartTime=40, animationEndTime=300)"
+                    }
+                ]
+            },
+            "op_code": 29
         }
     ],
     "edges": [
@@ -457,21 +493,27 @@
             "end": 2553856137376
         },
         {
-            "id": 1765329838640,
-            "edge_type": 2,
-            "start": 2553856137424,
-            "end": 1765329832640
-        },
-        {
             "id": 2973751959728,
             "edge_type": 2,
             "start": 2228617165168,
             "end": 1973748454240
         },
         {
-            "id": 2241294677568,
+            "id": 2138383362048,
             "edge_type": 2,
             "start": 2553856137424,
+            "end": 2138383361040
+        },
+        {
+            "id": 2138383363968,
+            "edge_type": 2,
+            "start": 2138383361088,
+            "end": 1765329832640
+        },
+        {
+            "id": 2138383365648,
+            "edge_type": 2,
+            "start": 2138383361088,
             "end": 2241243348560
         }
     ]
