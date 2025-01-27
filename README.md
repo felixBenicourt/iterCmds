@@ -1,6 +1,6 @@
 # iterCmds
 
-A sandbox repository for development purposes with Iter and other tools.  
+A repository for development purposes with Iter and other tools.  
 Additional documentation and specific examples will be provided in the future.
 
 ## Pages
