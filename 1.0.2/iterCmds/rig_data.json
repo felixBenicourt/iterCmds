@@ -1,13 +1,13 @@
 {
     "data": {
-        "new head": "amiral_mdl_wrapped_dummy",
-        "eye left": "amiral_mdl_eyeLeft_lod0_mesh",
-        "eye right": "amiral_mdl_eyeRight_lod0_mesh",
+        "new head": "character_mdl_wrapped_dummy",
+        "eye left": "character_mdl_eyeLeft_lod0_mesh",
+        "eye right": "character_mdl_eyeRight_lod0_mesh",
         "root joint": "spine_04",
-        "mouth mesh": "amiral_mdl_teeth_lod0_mesh",
+        "mouth mesh": "character_mdl_teeth_lod0_mesh",
         "source namespace": "DHIhead",
-        "mouth mesh ada":"Ada_full_rig_teeth_lod0_mesh",
-        "rln node":"Ada_full_rig_rl4Embedded_Ada_rl1",
-        "ada head":"Ada_full_rig_head_lod0_mesh"
+        "mouth mesh ada":"teeth_lod0_mesh",
+        "rln node":"rl4Embedded_Ada_rl",
+        "ada head":"head_lod0_mesh"
     }
 }
